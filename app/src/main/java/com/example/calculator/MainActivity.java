@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ans = findViewById(R.id.idans);
         sol = findViewById(R.id.solution);
 
-        assign(c, R.id.idc);
+        assign(c, R.id.del);
 
         assign(openbracket, R.id.op);
         assign(closebracket, R.id.cl);

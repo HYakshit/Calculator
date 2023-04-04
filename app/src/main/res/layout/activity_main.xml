@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <TextView
@@ -33,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#F3F2F2"
+        android:background="#08FDA3AD"
         android:orientation="vertical"
         android:id="@+id/button_layout">
         <LinearLayout
@@ -42,46 +43,67 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <Button
-                android:layout_width="90dp"
-                android:layout_height="75dp"
-                android:layout_margin="4dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="78dp"
+
+
+                     android:layout_height="78dp"
+
                 android:id="@+id/op"
-                android:textColor="@color/green"
+                android:layout_marginHorizontal="8dp"
+                android:backgroundTint="#EC980D"
                 android:text="("
                 android:textSize="25sp"
                 app:cornerRadius="30dp" />
 
-            <Button
-                android:layout_width="90dp"
-                android:layout_height="75dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="78dp"
+
+
+                     android:layout_height="78dp"
+
                 android:id="@+id/cl"
+                android:layout_marginHorizontal="8dp"
                 android:text=")"
-                android:textColor="@color/green"
-                android:layout_margin="4dp"
+                android:backgroundTint="#EC980D"
                 android:textSize="25sp"
-                app:cornerRadius="30dp"
+                app:cornerRadius="36dp"
                />
-            <Button
-                android:layout_width="90dp"
-                android:layout_height="75dp"
-                android:id="@+id/idc"
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="78dp"
+
+
+                     android:layout_height="78dp"
+
                 android:text="del"
-                android:textColor="@color/green"
-                android:layout_margin="4dp"
-                android:textSize="18sp"
+                android:textSize="0sp"
+                android:paddingStart="23dp"
+                android:paddingEnd="0dp"
+                app:icon="@drawable/clear"
+                android:id="@+id/del"
                 app:cornerRadius="30dp"
+                android:backgroundTint="#EC980D"
+                android:layout_marginHorizontal="8dp"
                 />
-            <Button
-                android:layout_width="90dp"
-                android:layout_height="75dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="78dp"
+
+
+                     android:layout_height="78dp"
+
                 android:text="/"
+                android:textSize="0sp"
+                android:paddingStart="25dp"
+                android:paddingEnd="0dp"
+                android:backgroundTint="#EC980D"
+                app:icon="@drawable/divide"
                 android:id="@+id/iddivide"
-                android:textColor="@color/green"
-                android:textSize="25sp"
                 app:cornerRadius="30dp"
-                android:layout_margin="4dp"
+                android:layout_marginHorizontal="8dp"
                 />
+
+
 
         </LinearLayout>
         <LinearLayout
@@ -89,85 +111,113 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal">
-            <Button
-                android:layout_width="90dp"
-                android:layout_height="75dp"
-                android:layout_margin="4dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="78dp"
+
+
+                   android:layout_height="78dp"
+
+                android:layout_marginHorizontal="8dp"
                 android:text="7"
                 android:id="@+id/idseven"
                 android:textSize="25sp"
                 app:cornerRadius="30dp"
                 />
-            <Button
-                android:layout_width="90dp"
-                android:layout_height="75dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="78dp"
+
+
+                     android:layout_height="78dp"
+
                 android:text="8"
                 android:id="@+id/ideight"
-                android:layout_margin="4dp"
+                android:layout_marginHorizontal="8dp"
                 android:textSize="25sp"
                 app:cornerRadius="30dp"
                 />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="75dp"
-                android:layout_margin="4dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="78dp"
+
+
+                     android:layout_height="78dp"
+
+                android:layout_marginHorizontal="8dp"
                 android:text="9"
                 android:id="@+id/idnine"
                 android:textSize="25sp"
                 app:cornerRadius="30dp" />
-            <Button
-                android:layout_width="90dp"
-                android:layout_height="75dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="78dp"
+
+
+                     android:layout_height="78dp"
+
                 android:text="*"
+                android:textSize="0sp"
+                android:paddingStart="15dp"
+                android:paddingEnd="0dp"
+                android:backgroundTint="#EC980D"
+                app:icon="@drawable/multiply"
                 android:id="@+id/idstar"
-                android:textColor="@color/green"
-                android:textSize="25sp"
                 app:cornerRadius="30dp"
-                android:layout_margin="4dp"
+                android:layout_marginHorizontal="8dp"
                 />
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal">
-            <Button
-                android:layout_width="90dp"
-                android:layout_height="75dp"
-                android:layout_margin="4dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="78dp"
+
+
+                   android:layout_height="78dp"
+
+                android:layout_marginHorizontal="8dp"
                 android:text="4"
                 android:id="@+id/idfour"
                 android:textSize="25sp"
                 app:cornerRadius="30dp"
                 />
-            <Button
-                android:layout_width="90dp"
-                android:layout_height="75dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="78dp"
+
+
+                     android:layout_height="78dp"
+
                 android:text="5"
                 android:id="@+id/idfive"
-                android:layout_margin="4dp"
+                android:layout_marginHorizontal="8dp"
                 android:textSize="25sp"
                 app:cornerRadius="30dp"
                 />
-            <Button
-                android:layout_width="90dp"
-                android:layout_height="75dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="78dp"
+
+
+                     android:layout_height="78dp"
+
                 android:text="6"
                 android:id="@+id/idsix"
-                android:layout_margin="4dp"
+                android:layout_marginHorizontal="8dp"
                 android:textSize="25sp"
                 app:cornerRadius="30dp"
                 />
-            <Button
-                android:layout_width="90dp"
-                android:layout_height="75dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="78dp"
+
+
+                     android:layout_height="78dp"
+
                 android:text="-"
                 android:id="@+id/idminus"
-                android:textColor="@color/green"
-                android:textSize="30dp"
+                android:textSize="30sp"
+                android:backgroundTint="#EC980D"
                 app:cornerRadius="30dp"
-                android:layout_margin="4dp"
+                android:layout_marginHorizontal="8dp"
                 />
         </LinearLayout>
         <LinearLayout
@@ -175,42 +225,54 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal">
-            <Button
-                android:layout_width="90dp"
-                android:layout_height="75dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="78dp"
+
+
+                   android:layout_height="78dp"
+
                 android:text="1"
                 android:id="@+id/idone"
                 android:textSize="25sp"
-                android:layout_margin="4dp"
+                android:layout_marginHorizontal="8dp"
                 app:cornerRadius="30dp"
                 />
-            <Button
-                android:layout_width="90dp"
-                android:layout_height="75dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="78dp"
+
+
+                     android:layout_height="78dp"
+
                 android:text="2"
                 android:id="@+id/idtwo"
-                android:layout_margin="4dp"
+                android:layout_marginHorizontal="8dp"
                 android:textSize="25sp"
                 app:cornerRadius="30dp"
                 />
-            <Button
-                android:layout_width="90dp"
-                android:layout_height="75dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="78dp"
+
+
+                     android:layout_height="78dp"
+
                 android:text="3"
                 android:id="@+id/idthree"
-                android:layout_margin="4dp"
+                android:layout_marginHorizontal="8dp"
                 android:textSize="25sp"
                 app:cornerRadius="30dp"
                 />
-            <Button
-                android:layout_width="90dp"
-                android:layout_height="75dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="78dp"
+
+
+                     android:layout_height="78dp"
+
                 android:text="+"
+                android:backgroundTint="#EC980D"
                 android:id="@+id/idplus"
-                android:textColor="@color/green"
                 android:textSize="25sp"
                 app:cornerRadius="30dp"
-                android:layout_margin="4dp"
+                android:layout_marginHorizontal="8dp"
                 />
         </LinearLayout>
         <LinearLayout
@@ -218,41 +280,48 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal">
-            <Button
-                android:layout_width="90dp"
-                android:layout_margin="4dp"
-                android:layout_height="75dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="78dp"
+
+
+                     android:layout_marginHorizontal="8dp"
+              android:layout_height="78dp"
+
                 android:text="AC"
+                android:backgroundTint="#EC980D"
                 android:id="@+id/idac"
-                android:textColor="@color/red"
-                android:textSize="25sp"
+                android:textSize="20sp"
                 app:cornerRadius="30dp"
                 />
-            <Button
-                android:layout_width="90dp"
-                android:layout_margin="4dp"
-                android:layout_height="75dp"
-                android:layout_marginHorizontal="3dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="78dp"
+
+
+                     android:layout_height="78dp"
+
+                android:layout_marginHorizontal="8dp"
                 android:text="0"
                 android:id="@+id/idzero"
                 android:textSize="25sp"
                 app:cornerRadius="30dp"
                 />
-            <Button
-                android:layout_width="90dp"
-                android:layout_height="75dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="78dp"
+
+
+                     android:layout_height="78dp"
+
                 android:text="."
                 android:id="@+id/iddot"
-                android:textColor="@color/green"
-                android:layout_margin="4dp"
+                android:layout_marginHorizontal="8dp"
                 android:textSize="25sp"
                 app:cornerRadius="30dp"
                 />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="75dp"
-                android:layout_margin="4dp"
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="95dp"
+                android:layout_height="78dp"
+
                 android:text="="
                 android:backgroundTint="#EC980D"
                 android:id="@+id/idequals"
