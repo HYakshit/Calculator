@@ -51,47 +51,72 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn = findViewById(id);
         btn.setOnClickListener(this);
     }
+String dellast(String s){
+    s=s.substring(0,s.length()-1);
+    return s;
+
+}
 
     @Override
     public void onClick(View view) {
+
         MaterialButton button = (MaterialButton) view;
+        // Assigning input to local variable
+
+        String inputdata = sol.getText().toString();
         //getting text of button
         String buttontext = button.getText().toString();
-        // Assigning input to local variable
-        String inputdata = sol.getText().toString();
 
-        if (buttontext.equals("AC")) {
-            sol.setText("");
-            ans.setText("");
-            return;
+        // removes . if already inserted
+        if(inputdata.contains(".") && buttontext.equals(".")){
+            inputdata= dellast(inputdata);
+
+
+
         }
 
-        if (buttontext.equals("=")) {
-            //to keep the ans if ans is empty
-            if(!(ans.getText().equals(""))){
-            sol.setText((ans.getText()));}
-            ans.setText("");
-            return;
+        // shows toast and empty string if operator is clicked before number if input is empty.
+        if(inputdata.length()==0 &&  ( buttontext.equals("+") || buttontext.equals("*") || buttontext.equals("/") || buttontext.equals("-") ) ){
+            Toast.makeText(this,"Invalid Format",Toast.LENGTH_SHORT).show();
+
+            buttontext="";
         }
-        if (buttontext.equals("del")){
-            //to remove array out of bond exception
-           if(inputdata.length()>0)
-           {
-              inputdata = inputdata.substring(0,inputdata.length()-1);
-               ans.setText("");
+        else {
+
+            if (buttontext.equals("AC")) {
+                sol.setText("");
+                ans.setText("");
+                return;
             }
-        } else {
-            inputdata = inputdata + buttontext;
-        }
-        sol.setText(inputdata);
-        //wishes me
-        if(sol.getText().equals("112002")){
-            Toast.makeText(this,"Akshit's Birthday",Toast.LENGTH_SHORT).show();
-        }
-        String finalresult = getResult(inputdata);
-        //assign value if calculation is error free
-        if (!finalresult.equals("Err")) {
-            ans.setText(finalresult);
+
+            if (buttontext.equals("=")) {
+                //to keep the ans if ans is empty
+                if (!(ans.getText().equals(""))) {
+                    sol.setText((ans.getText()));
+                }
+                ans.setText("");
+                return;
+            }
+            if (buttontext.equals("del")) {
+                //to remove array out of bond exception
+                if (inputdata.length() > 0) {
+                    inputdata = dellast(inputdata);
+                    ans.setText("");
+                }
+            }
+            else {
+                inputdata = inputdata + buttontext;
+            }
+            sol.setText(inputdata);
+            //wishes me
+            if (sol.getText().equals("112002")) {
+                Toast.makeText(this, "Akshit's Birthday", Toast.LENGTH_SHORT).show();
+            }
+            String finalresult = getResult(inputdata);
+            //assign value if calculation is error free
+            if (!finalresult.equals("Err")) {
+                ans.setText(finalresult);
+            }
         }
     }
 
@@ -110,5 +135,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return "Err";
         }
     }
+
 
 }
