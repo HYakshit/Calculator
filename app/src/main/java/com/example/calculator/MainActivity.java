@@ -2,7 +2,6 @@ package com.example.calculator;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -67,21 +66,13 @@ String dellast(String s){
         //getting text of button
         String buttontext = button.getText().toString();
 
-        // removes . if already inserted
-        if(inputdata.contains(".") && buttontext.equals(".")){
-            inputdata= dellast(inputdata);
-
-
-
-        }
 
         // shows toast and empty string if operator is clicked before number if input is empty.
-        if(inputdata.length()==0 &&  ( buttontext.equals("+") || buttontext.equals("*") || buttontext.equals("/") || buttontext.equals("-") ) ){
+        if(inputdata.length()==0 &&  ( buttontext.equals("+") || buttontext.equals("*") || buttontext.equals("/") || buttontext.equals("-")|| buttontext.equals("."))){
             Toast.makeText(this,"Invalid Format",Toast.LENGTH_SHORT).show();
-
-            buttontext="";
         }
-        else {
+        else
+        {
 
             if (buttontext.equals("AC")) {
                 sol.setText("");
