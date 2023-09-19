@@ -65,15 +65,22 @@ String dellast(String s){
         String inputdata = sol.getText().toString();
         //getting text of button
         String buttontext = button.getText().toString();
+        if(inputdata.length()>=1){
+      String ch= String.valueOf(inputdata.charAt(inputdata.length()-1));
+        if(ch.equals("+") || ch.equals("*") ||ch.equals("/") ||ch.equals("-")||ch.equals(".")){
+            if ( buttontext.equals("+") || buttontext.equals("*") || buttontext.equals("/") || buttontext.equals("-")|| buttontext.equals(".")){
+                Toast.makeText(this, "Asee nhi hota", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            }
 
+        }
 
         // shows toast and empty string if operator is clicked before number if input is empty.
         if(inputdata.length()==0 &&  ( buttontext.equals("+") || buttontext.equals("*") || buttontext.equals("/") || buttontext.equals("-")|| buttontext.equals("."))){
-            Toast.makeText(this,"Invalid Format",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Asee nhi hota", Toast.LENGTH_SHORT).show();
+            return;
         }
-        else
-        {
-
             if (buttontext.equals("AC")) {
                 sol.setText("");
                 ans.setText("");
@@ -85,6 +92,8 @@ String dellast(String s){
                 if (!(ans.getText().equals(""))) {
                     sol.setText((ans.getText()));
                 }
+
+
                 ans.setText("");
                 return;
             }
@@ -108,7 +117,7 @@ String dellast(String s){
             if (!finalresult.equals("Err")) {
                 ans.setText(finalresult);
             }
-        }
+
     }
 
     String getResult(String data) {
