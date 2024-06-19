@@ -69,7 +69,7 @@ String dellast(String s){
       String ch= String.valueOf(inputdata.charAt(inputdata.length()-1));
         if(ch.equals("+") || ch.equals("*") ||ch.equals("/") ||ch.equals("-")||ch.equals(".")){
             if ( buttontext.equals("+") || buttontext.equals("*") || buttontext.equals("/") || buttontext.equals("-")|| buttontext.equals(".")){
-                Toast.makeText(this, "Asee nhi hota", Toast.LENGTH_SHORT).show();
+                notAllowed();
                 return;
             }
             }
@@ -78,7 +78,7 @@ String dellast(String s){
 
         // shows toast and empty string if operator is clicked before number if input is empty.
         if(inputdata.length()==0 &&  ( buttontext.equals("+") || buttontext.equals("*") || buttontext.equals("/") || buttontext.equals("-")|| buttontext.equals("."))){
-            Toast.makeText(this, "Asee nhi hota", Toast.LENGTH_SHORT).show();
+            notAllowed();
             return;
         }
             if (buttontext.equals("AC")) {
@@ -135,6 +135,7 @@ String dellast(String s){
             return "Err";
         }
     }
-
-
+    void notAllowed(){
+        Toast.makeText(this, "Not Allowed", Toast.LENGTH_SHORT).show();
+    }
 }
